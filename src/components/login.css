@@ -1,95 +1,330 @@
-body {
-  margin: 0;
-  font-family: Arial, sans-serif;
-  background-color: #4659e8;
-}
+/* Main Page */
 
-/* Main login box */
-.login {
-  width: 900px;
-  height: 550px;
-  margin: 70px auto;
+.login-page {
+  min-height: 100vh;
+
   display: flex;
-  background-color: white;
-  border-radius: 25px;
+  justify-content: center;
+  align-items: center;
+
+  background: #e6f7ff;
+
+  padding: 20px;
+}
+
+
+/* Main Container */
+
+.login-container {
+  width: 900px;
+  min-height: 550px;
+
+  display: flex;
+
+  background: white;
+
+  border-radius: 20px;
+
   overflow: hidden;
+
+  box-shadow: 0 10px 30px rgba(0, 150, 200, 0.15);
 }
 
-/* Left side */
-.form {
+
+/* Left Image */
+
+.login-image {
   width: 50%;
-  padding: 50px;
-  box-sizing: border-box;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  overflow: hidden;
+
+  background: #bdeeff;
 }
 
-.form h2 {
-  font-size: 35px;
-  margin: 10px 0;
-}
-
-.form p {
-  color: #777;
-  margin-bottom: 30px;
-}
-
-/* Input boxes */
-.form input {
-  width: 100%;
-  padding: 15px;
-  margin-bottom: 20px;
-  box-sizing: border-box;
-  border: none;
-  border-radius: 8px;
-  background-color: #f0f2f8;
-  font-size: 15px;
-}
-
-/* Forgot password */
-.form a {
-  display: block;
-  text-align: right;
-  color: #4169e1;
-  margin-bottom: 25px;
-}
-
-/* Login button */
-.form button {
-  padding: 12px 30px;
-  border: none;
-  border-radius: 6px;
-  background-color: #4169e1;
-  color: white;
-  cursor: pointer;
-}
-
-/* Login button width */
-.form > button {
-  width: 100%;
-  font-size: 16px;
-}
-
-/* Sign up text */
-.form p:last-child {
-  text-align: center;
-  margin-top: 30px;
-}
-
-.form p:last-child button {
-  background: none;
-  color: #4169e1;
-  padding: 0;
-  margin-left: 5px;
-}
-
-/* Right image */
-.image {
-  width: 50%;
-  height: 100%;
-  background-color: #eef3ff;
-}
-
-.image img {
+.login-image img {
   width: 100%;
   height: 100%;
+
   object-fit: cover;
+}
+
+
+/* Right Login Form */
+
+.login-form {
+  width: 50%;
+
+  padding: 50px 45px;
+
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+
+  box-sizing: border-box;
+}
+
+
+/* Heading */
+
+.login-form h1 {
+  margin: 0;
+
+  font-size: 32px;
+
+  color: #087ea4;
+
+  text-align: center;
+}
+
+
+/* Subtitle */
+
+.login-subtitle {
+  margin-top: 8px;
+  margin-bottom: 25px;
+
+  color: #6b8b99;
+
+  text-align: center;
+
+  font-size: 14px;
+}
+
+
+/* Labels */
+
+.login-form label {
+  display: block;
+
+  margin-top: 15px;
+  margin-bottom: 7px;
+
+  font-size: 14px;
+
+  font-weight: 600;
+
+  color: #315766;
+}
+
+
+/* Input Fields */
+
+.login-form input {
+  width: 100%;
+  height: 45px;
+
+  padding: 0 14px;
+
+  box-sizing: border-box;
+
+  border: 1px solid #b9dfea;
+
+  border-radius: 8px;
+
+  outline: none;
+
+  font-size: 14px;
+
+  background: #f9fdff;
+
+  color: #333;
+}
+
+
+/* Input Focus */
+
+.login-form input:focus {
+  border-color: #55bfe3;
+
+  box-shadow: 0 0 0 3px rgba(85, 191, 227, 0.12);
+}
+
+
+/* Login Button */
+
+.login-button {
+  width: 100%;
+  height: 45px;
+
+  margin-top: 25px;
+
+  border: none;
+
+  border-radius: 8px;
+
+  background: #45b9df;
+
+  color: white;
+
+  font-size: 15px;
+
+  font-weight: 600;
+
+  cursor: pointer;
+
+  transition: 0.2s;
+}
+
+
+/* Login Button Hover */
+
+.login-button:hover {
+  background: #269fc9;
+}
+
+
+/* OR Divider */
+
+.or-divider {
+  display: flex;
+
+  align-items: center;
+
+  gap: 12px;
+
+  margin: 22px 0;
+
+  color: #8aa5b0;
+
+  font-size: 13px;
+}
+
+
+/* Divider Lines */
+
+.or-divider::before,
+.or-divider::after {
+  content: "";
+
+  flex: 1;
+
+  height: 1px;
+
+  background: #cce8f1;
+}
+
+
+/* Google Button */
+
+.google-button {
+  width: 100%;
+  height: 45px;
+
+  display: flex;
+
+  align-items: center;
+  justify-content: center;
+
+  gap: 10px;
+
+  background: white;
+
+  border: 1px solid #b9dfea;
+
+  border-radius: 8px;
+
+  color: #315766;
+
+  font-size: 14px;
+
+  font-weight: 500;
+
+  cursor: pointer;
+
+  transition: 0.2s;
+}
+
+
+/* Google Button Hover */
+
+.google-button:hover {
+  background: #f2fbff;
+
+  border-color: #55bfe3;
+}
+
+
+/* Google Icon */
+
+.google-icon {
+  width: 22px;
+  height: 22px;
+
+  display: flex;
+
+  align-items: center;
+  justify-content: center;
+
+  font-family: Arial, sans-serif;
+
+  font-size: 20px;
+
+  font-weight: bold;
+
+  color: #4285f4;
+}
+
+
+/* Signup Text */
+
+.signup-text {
+  margin-top: 25px;
+
+  text-align: center;
+
+  color: #6b8b99;
+
+  font-size: 14px;
+}
+
+
+/* Signup Link */
+
+.signup-link {
+  border: none;
+
+  background: none;
+
+  color: #0795c2;
+
+  font-weight: 600;
+
+  cursor: pointer;
+
+  margin-left: 5px;
+
+  font-size: 14px;
+}
+
+
+/* Signup Link Hover */
+
+.signup-link:hover {
+  text-decoration: underline;
+}
+
+
+/* Mobile Responsive */
+
+@media (max-width: 700px) {
+
+  .login-container {
+    width: 100%;
+
+    min-height: auto;
+  }
+
+  .login-image {
+    display: none;
+  }
+
+  .login-form {
+    width: 100%;
+
+    padding: 40px 30px;
+  }
 }

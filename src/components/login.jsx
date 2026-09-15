@@ -1,31 +1,116 @@
+import React, { useState } from "react";
 import "./login.css";
-import image from "../assets/auth-image.png";
 
 function Login({ onSignup }) {
+  const [email, setEmail] = useState("");
+  const [password, setPassword] = useState("");
+
+  const handleLogin = (e) => {
+    e.preventDefault();
+
+    console.log("Email:", email);
+    console.log("Password:", password);
+
+    // Backend will be connected later
+  };
+
+  const handleGoogleLogin = () => {
+    // Google login will be connected later
+    console.log("Continue with Google clicked");
+  };
+
   return (
-    <div className="login">
+    <div className="login-page">
 
-      <div className="form">
-        <h2>Login</h2>
+      <div className="login-container">
 
-        <p>Welcome back! Please login to your account.</p>
+        {/* Left Image Section */}
+        <div className="login-image">
+          <img
+            src="/src/assets/auth-image.png"
+            alt="Login"
+          />
+        </div>
 
-        <input type="text" placeholder="Username" />
+        {/* Right Login Section */}
+        <div className="login-form">
 
-        <input type="password" placeholder="Password" />
+          <h1>Welcome Back!</h1>
 
-        <a href="#">Forgot password?</a>
+          <p className="login-subtitle">
+            Login to continue
+          </p>
 
-        <button>Login</button>
+          {/* Login Form */}
+          <form onSubmit={handleLogin}>
 
-        <p>
-          Don't have an account?
-          <button onClick={onSignup}>Sign Up</button>
-        </p>
-      </div>
+            {/* Email */}
+            <label htmlFor="email">
+              Email
+            </label>
 
-      <div className="image">
-        <img src={image} alt="Login" />
+            <input
+              id="email"
+              type="email"
+              placeholder="Enter your email"
+              value={email}
+              onChange={(e) => setEmail(e.target.value)}
+              required
+            />
+
+            {/* Password */}
+            <label htmlFor="password">
+              Password
+            </label>
+
+            <input
+              id="password"
+              type="password"
+              placeholder="Enter your password"
+              value={password}
+              onChange={(e) => setPassword(e.target.value)}
+              required
+            />
+
+            {/* Login Button */}
+            <button
+              type="submit"
+              className="login-button"
+            >
+              Login
+            </button>
+
+          </form>
+
+          {/* OR Divider */}
+          <div className="or-divider">
+            <span>OR</span>
+          </div>
+
+          {/* Google Login Button */}
+          <button
+            type="button"
+            className="google-button"
+            onClick={handleGoogleLogin}
+          >
+            <span className="google-icon">G</span>
+            <span>Continue with Google</span>
+          </button>
+
+          {/* Sign Up */}
+          <p className="signup-text">
+            Don't have an account?
+
+            <button
+              type="button"
+              className="signup-link"
+              onClick={onSignup}
+            >
+              Sign Up
+            </button>
+          </p>
+
+        </div>
       </div>
 
     </div>
