@@ -2,119 +2,113 @@ import React, { useState } from "react";
 import "./login.css";
 
 function Login({ onSignup }) {
-  const [email, setEmail] = useState("");
-  const [password, setPassword] = useState("");
 
-  const handleLogin = (e) => {
-    e.preventDefault();
+    const [contact, setContact] = useState("");
 
-    console.log("Email:", email);
-    console.log("Password:", password);
+    const handleGetOTP = (e) => {
+        e.preventDefault();
 
-    // Backend will be connected later
-  };
+        if (!contact) {
+            alert("Please enter your email or mobile number");
+            return;
+        }
 
-  const handleGoogleLogin = () => {
-    // Google login will be connected later
-    console.log("Continue with Google clicked");
-  };
+        alert("OTP will be sent to " + contact);
+    };
 
-  return (
-    <div className="login-page">
+    const handleGoogleLogin = () => {
+        alert("Google login will be connected later.");
+    };
 
-      <div className="login-container">
+    return (
+        <div className="login-page">
 
-        {/* Left Image Section */}
-        <div className="login-image">
-          <img
-            src="/src/assets/auth-image.png"
-            alt="Login"
-          />
-        </div>
+            <div className="login-container">
 
-        {/* Right Login Section */}
-        <div className="login-form">
+                {/* IMAGE */}
+                <div className="login-image">
+                    <img
+                        src="/src/assets/auth-image.png"
+                        alt="Login"
+                    />
+                </div>
 
-          <h1>Welcome Back!</h1>
 
-          <p className="login-subtitle">
-            Login to continue
-          </p>
+                {/* LOGIN FORM */}
+                <div className="login-form">
 
-          {/* Login Form */}
-          <form onSubmit={handleLogin}>
+                    <h1>Welcome Back!</h1>
 
-            {/* Email */}
-            <label htmlFor="email">
-              Email
-            </label>
+                    <p className="login-subtitle">
+                        Login using your email or mobile number
+                    </p>
 
-            <input
-              id="email"
-              type="email"
-              placeholder="Enter your email"
-              value={email}
-              onChange={(e) => setEmail(e.target.value)}
-              required
-            />
+                    <form onSubmit={handleGetOTP}>
 
-            {/* Password */}
-            <label htmlFor="password">
-              Password
-            </label>
+                        <label htmlFor="contact">
+                            Email or Mobile Number
+                        </label>
 
-            <input
-              id="password"
-              type="password"
-              placeholder="Enter your password"
-              value={password}
-              onChange={(e) => setPassword(e.target.value)}
-              required
-            />
+                        <input
+                            id="contact"
+                            type="text"
+                            placeholder="Enter email or mobile number"
+                            value={contact}
+                            onChange={(e) => setContact(e.target.value)}
+                            required
+                        />
 
-            {/* Login Button */}
-            <button
-              type="submit"
-              className="login-button"
-            >
-              Login
-            </button>
+                        <button
+                            type="submit"
+                            className="login-button"
+                        >
+                            Get OTP
+                        </button>
 
-          </form>
+                    </form>
 
-          {/* OR Divider */}
-          <div className="or-divider">
-            <span>OR</span>
-          </div>
 
-          {/* Google Login Button */}
-          <button
-            type="button"
-            className="google-button"
-            onClick={handleGoogleLogin}
-          >
-            <span className="google-icon">G</span>
-            <span>Continue with Google</span>
-          </button>
+                    {/* OR */}
 
-          {/* Sign Up */}
-          <p className="signup-text">
-            Don't have an account?
+                    <div className="or-divider">
+                        <span>OR</span>
+                    </div>
 
-            <button
-              type="button"
-              className="signup-link"
-              onClick={onSignup}
-            >
-              Sign Up
-            </button>
-          </p>
+
+                    {/* GOOGLE */}
+
+                    <button
+                        type="button"
+                        className="google-button"
+                        onClick={handleGoogleLogin}
+                    >
+                        <span className="google-icon">G</span>
+                        <span>Continue with Google</span>
+                    </button>
+
+
+                    {/* SIGN UP */}
+
+                    <p className="signup-text">
+
+                        Don't have an account?
+
+                        <button
+                            type="button"
+                            className="signup-link"
+                            onClick={onSignup}
+                        >
+                            Sign Up
+                        </button>
+
+                    </p>
+
+                </div>
+
+            </div>
 
         </div>
-      </div>
-
-    </div>
-  );
+    );
 }
 
 export default Login;
