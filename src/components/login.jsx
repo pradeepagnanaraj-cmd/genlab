@@ -1,7 +1,7 @@
 import React, { useState } from "react";
 import "./login.css";
 
-function Login({ onSignup }) {
+function Login({ onSignup, onLoginSuccess }) {
 
     const [contact, setContact] = useState("");
     const [otp, setOtp] = useState("");
@@ -104,6 +104,9 @@ function Login({ onSignup }) {
                 );
 
                 console.log("Logged in user:", data.user);
+
+                // Go to Home page
+                onLoginSuccess();
 
             } else {
 
