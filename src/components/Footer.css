@@ -1,0 +1,108 @@
+.site-footer {
+  background: #ffffff;
+  border-top: 1px solid var(--border-color);
+  padding: 40px 0 24px 0;
+  margin-top: 60px;
+}
+
+.footer-top {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  gap: 24px;
+  padding-bottom: 24px;
+  border-bottom: 1px solid #F1F5F9;
+}
+
+.footer-brand-info {
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+}
+
+.footer-logo {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.footer-logo-icon {
+  font-size: 1.4rem;
+}
+
+.footer-title {
+  font-size: 1.1rem;
+  font-weight: 800;
+  color: var(--text-dark);
+}
+
+.footer-slogan {
+  font-size: 0.85rem;
+  color: var(--text-muted);
+  font-weight: 500;
+}
+
+.footer-links-group {
+  display: flex;
+  align-items: center;
+  gap: 20px;
+  flex-wrap: wrap;
+}
+
+.footer-links-group a {
+  font-size: 0.9rem;
+  font-weight: 600;
+  color: var(--text-dark);
+  transition: color 0.2s ease;
+}
+
+.footer-links-group a:hover {
+  color: var(--primary-green);
+}
+
+.footer-socials {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+
+.social-icon {
+  width: 34px;
+  height: 34px;
+  border-radius: 50%;
+  background: #F1F5F9;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: var(--text-dark);
+  font-weight: 700;
+  font-size: 0.9rem;
+  transition: all 0.2s ease;
+}
+
+.social-icon:hover {
+  background: var(--primary-green);
+  color: #ffffff;
+}
+
+.footer-bottom {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding-top: 20px;
+  font-size: 0.82rem;
+  color: var(--text-muted);
+  flex-wrap: wrap;
+  gap: 12px;
+}
+
+.footer-legal {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.footer-legal a:hover {
+  color: var(--primary-green);
+}

@@ -1,4 +1,97 @@
-body {
+@import url('https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap');
+
+:root {
+  --primary-green: #0D7A57;
+  --primary-green-hover: #0A6346;
+  --primary-green-light: #E8F5E9;
+  --primary-green-accent: #10B981;
+  --bg-light-mint: #F0FDF4;
+  --text-dark: #0F172A;
+  --text-muted: #64748B;
+  --text-light: #94A3B8;
+  --bg-card: #FFFFFF;
+  --border-color: #E2E8F0;
+  --radius-sm: 8px;
+  --radius-md: 12px;
+  --radius-lg: 20px;
+  --radius-pill: 9999px;
+  --shadow-sm: 0 1px 3px rgba(0,0,0,0.05);
+  --shadow-md: 0 4px 12px rgba(13, 122, 87, 0.08);
+  --shadow-lg: 0 10px 25px rgba(13, 122, 87, 0.12);
+  --font-main: 'Plus Jakarta Sans', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+}
+
+* {
+  box-sizing: border-box;
   margin: 0;
-  font-family: Arial, sans-serif;
+  padding: 0;
+}
+
+body {
+  font-family: var(--font-main);
+  background-color: #FAFAFB;
+  color: var(--text-dark);
+  line-height: 1.5;
+  -webkit-font-smoothing: antialiased;
+}
+
+a {
+  color: inherit;
+  text-decoration: none;
+}
+
+button, input, select, textarea {
+  font-family: inherit;
+}
+
+.container {
+  max-width: 1240px;
+  margin: 0 auto;
+  padding: 0 24px;
+}
+
+/* Custom Scrollbar */
+::-webkit-scrollbar {
+  width: 8px;
+  height: 8px;
+}
+::-webkit-scrollbar-track {
+  background: #F1F5F9;
+}
+::-webkit-scrollbar-thumb {
+  background: #CBD5E1;
+  border-radius: 4px;
+}
+::-webkit-scrollbar-thumb:hover {
+  background: #94A3B8;
+}
+
+/* Badge Utilities */
+.badge-free {
+  background-color: #DCFCE7;
+  color: #15803D;
+  font-weight: 700;
+  font-size: 0.75rem;
+  padding: 4px 10px;
+  border-radius: var(--radius-pill);
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+}
+
+.badge-price {
+  background-color: #0D7A57;
+  color: #FFFFFF;
+  font-weight: 700;
+  font-size: 0.85rem;
+  padding: 4px 12px;
+  border-radius: var(--radius-pill);
+}
+
+.badge-condition {
+  background-color: #F1F5F9;
+  color: var(--text-muted);
+  font-size: 0.75rem;
+  font-weight: 600;
+  padding: 3px 8px;
+  border-radius: 6px;
 }

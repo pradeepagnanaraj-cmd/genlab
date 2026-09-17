@@ -1,238 +1,67 @@
-/* Main Page */
-
-.signup-page {
-  min-height: 100vh;
-
-  display: flex;
-  justify-content: center;
-  align-items: center;
-
-  background: #e6f7ff;
-
-  padding: 20px;
-}
-
-
-/* Main Container */
-
-.signup-container {
-  width: 900px;
-  min-height: 550px;
-
-  display: flex;
-
-  background: white;
-
-  border-radius: 20px;
-
-  overflow: hidden;
-
-  box-shadow: 0 10px 30px rgba(0, 150, 200, 0.15);
-}
-
-
-/* Left Image */
-
-.signup-image {
-  width: 50%;
-
-  display: flex;
-  align-items: center;
-  justify-content: center;
-
-  overflow: hidden;
-
-  background: #bdeeff;
-}
-
-.signup-image img {
-  width: 100%;
-  height: 100%;
-
-  object-fit: cover;
-}
-
-
-/* Right Signup Form */
-
-.signup-form {
-  width: 50%;
-
-  padding: 50px 45px;
-
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-
-  box-sizing: border-box;
-}
-
-
-/* Heading */
-
-.signup-form h1 {
-  margin: 0;
-
-  font-size: 32px;
-
-  color: #087ea4;
-
-  text-align: center;
-}
-
-
-/* Subtitle */
-
-.signup-subtitle {
-  margin-top: 8px;
-  margin-bottom: 25px;
-
-  color: #6b8b99;
-
-  text-align: center;
-
-  font-size: 14px;
-}
-
-
-/* Labels */
-
-.signup-form label {
-  display: block;
-
-  margin-top: 14px;
-  margin-bottom: 7px;
-
-  font-size: 14px;
-
-  font-weight: 600;
-
-  color: #315766;
-}
-
-
-/* Input Fields */
-
-.signup-form input {
-  width: 100%;
-  height: 45px;
-
-  padding: 0 14px;
-
-  box-sizing: border-box;
-
-  border: 1px solid #b9dfea;
-
-  border-radius: 8px;
-
-  outline: none;
-
-  font-size: 14px;
-
-  background: #f9fdff;
-
-  color: #333;
-}
-
-
-/* Input Focus */
-
-.signup-form input:focus {
-  border-color: #55bfe3;
-
-  box-shadow: 0 0 0 3px rgba(85, 191, 227, 0.12);
-}
-
-
-/* Sign Up Button */
-
-.signup-button {
-  width: 100%;
-  height: 45px;
-
-  margin-top: 25px;
-
-  border: none;
-
-  border-radius: 8px;
-
-  background: #45b9df;
-
-  color: white;
-
-  font-size: 15px;
-
-  font-weight: 600;
-
-  cursor: pointer;
-
-  transition: 0.2s;
-}
-
-
-/* Button Hover */
-
-.signup-button:hover {
-  background: #269fc9;
-}
-
-
-/* Login Text */
-
-.login-text {
-  margin-top: 25px;
-
-  text-align: center;
-
-  color: #6b8b99;
-
-  font-size: 14px;
-}
-
-
-/* Login Link */
-
-.login-link {
-  border: none;
-
-  background: none;
-
-  color: #0795c2;
-
-  font-weight: 600;
-
-  cursor: pointer;
-
-  margin-left: 5px;
-
-  font-size: 14px;
-}
-
-
-/* Login Link Hover */
-
-.login-link:hover {
-  text-decoration: underline;
-}
-
-
-/* Mobile Responsive */
-
-@media (max-width: 700px) {
-
-  .signup-container {
+.signup-screen {
+    min-height: 100vh;
     width: 100%;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    background-color: #EFF8F3;
+    font-family: 'Plus Jakarta Sans', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+}
 
-    min-height: auto;
-  }
+/* LEFT HALF */
+.signup-left-half {
+    background-color: #E5F3EB;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    overflow: hidden;
+}
 
-  .signup-image {
-    display: none;
-  }
+/* RIGHT HALF */
+.signup-right-half {
+    background-color: #EFF8F3;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 36px 24px;
+}
 
-  .signup-form {
+.signup-floating-card {
+    background: #ffffff;
+    border-radius: 24px;
+    padding: 40px 40px;
     width: 100%;
+    max-width: 440px;
+    box-shadow: 0 16px 40px rgba(0, 0, 0, 0.05);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+}
 
-    padding: 40px 30px;
-  }
+.signup-submit-btn {
+    width: 100%;
+    background-color: #0E8554;
+    color: #ffffff;
+    border: none;
+    border-radius: 10px;
+    padding: 12px;
+    font-size: 0.95rem;
+    font-weight: 700;
+    cursor: pointer;
+    transition: background-color 0.2s ease, transform 0.1s ease;
+    margin-top: 8px;
+}
+
+.signup-submit-btn:hover {
+    background-color: #0B6B43;
+    transform: translateY(-1px);
+}
+
+@media (max-width: 900px) {
+    .signup-screen {
+        grid-template-columns: 1fr;
+    }
+    .signup-left-half {
+        display: none;
+    }
 }

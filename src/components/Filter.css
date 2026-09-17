@@ -1,0 +1,130 @@
+.filter-sidebar {
+  background: #ffffff;
+  border-radius: var(--radius-lg);
+  border: 1px solid var(--border-color);
+  padding: 24px;
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.filter-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding-bottom: 12px;
+  border-bottom: 1px solid var(--border-color);
+}
+
+.filter-header h3 {
+  font-size: 1.1rem;
+  font-weight: 700;
+  color: var(--text-dark);
+}
+
+.reset-filter-btn {
+  background: none;
+  border: none;
+  color: var(--primary-green);
+  font-size: 0.85rem;
+  font-weight: 600;
+  cursor: pointer;
+}
+
+.reset-filter-btn:hover {
+  text-decoration: underline;
+}
+
+.filter-group {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.filter-group-title {
+  font-size: 0.85rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+  color: var(--text-muted);
+}
+
+.category-filter-list {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+}
+
+.filter-chip {
+  background: #F1F5F9;
+  border: 1px solid transparent;
+  color: var(--text-dark);
+  font-size: 0.85rem;
+  font-weight: 600;
+  padding: 6px 12px;
+  border-radius: var(--radius-pill);
+  cursor: pointer;
+  transition: all 0.2s ease;
+  display: flex;
+  align-items: center;
+  gap: 6px;
+}
+
+.filter-chip:hover {
+  background: #E2E8F0;
+}
+
+.filter-chip.active {
+  background: var(--primary-green-light);
+  color: var(--primary-green);
+  border-color: var(--primary-green);
+}
+
+.radio-filter-options {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+.radio-label {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  font-size: 0.9rem;
+  color: var(--text-dark);
+  cursor: pointer;
+}
+
+.radio-label input[type="radio"] {
+  accent-color: var(--primary-green);
+}
+
+.filter-select {
+  width: 100%;
+  padding: 10px 14px;
+  border-radius: var(--radius-sm);
+  border: 1px solid var(--border-color);
+  font-size: 0.9rem;
+  color: var(--text-dark);
+  outline: none;
+  background-color: #FAFAFA;
+}
+
+.filter-select:focus {
+  border-color: var(--primary-green);
+}
+
+.filter-text-input {
+  width: 100%;
+  padding: 10px 14px;
+  border-radius: var(--radius-sm);
+  border: 1px solid var(--border-color);
+  font-size: 0.9rem;
+  color: var(--text-dark);
+  outline: none;
+  background-color: #FAFAFA;
+}
+
+.filter-text-input:focus {
+  border-color: var(--primary-green);
+}

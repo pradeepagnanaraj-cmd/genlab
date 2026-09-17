@@ -1,0 +1,132 @@
+.browse-page {
+  padding-top: 32px;
+  padding-bottom: 60px;
+}
+
+.browse-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 24px;
+  margin-bottom: 32px;
+  flex-wrap: wrap;
+}
+
+.browse-header h1 {
+  font-size: 2.2rem;
+  font-weight: 800;
+  color: var(--text-dark);
+}
+
+.browse-header p {
+  color: var(--text-muted);
+  font-size: 0.95rem;
+}
+
+.browse-search-wrapper {
+  width: 100%;
+  max-width: 420px;
+}
+
+.browse-layout {
+  display: grid;
+  grid-template-columns: 280px 1fr;
+  gap: 32px;
+}
+
+.browse-toolbar {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 24px;
+  background: #ffffff;
+  padding: 12px 20px;
+  border-radius: var(--radius-md);
+  border: 1px solid var(--border-color);
+}
+
+.results-count {
+  font-size: 0.9rem;
+  color: var(--text-muted);
+}
+
+.results-count strong {
+  color: var(--text-dark);
+}
+
+.sort-wrapper {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  font-size: 0.88rem;
+  color: var(--text-muted);
+}
+
+.sort-select {
+  border: 1px solid var(--border-color);
+  padding: 6px 12px;
+  border-radius: var(--radius-sm);
+  background: #ffffff;
+  font-size: 0.88rem;
+  color: var(--text-dark);
+  outline: none;
+}
+
+.browse-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 24px;
+}
+
+.empty-state {
+  background: #ffffff;
+  border-radius: var(--radius-lg);
+  border: 1px dashed var(--border-color);
+  padding: 60px 24px;
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 12px;
+}
+
+.empty-icon {
+  font-size: 3rem;
+}
+
+.empty-state h3 {
+  font-size: 1.2rem;
+  font-weight: 700;
+  color: var(--text-dark);
+}
+
+.empty-state p {
+  color: var(--text-muted);
+  font-size: 0.9rem;
+}
+
+.reset-btn {
+  margin-top: 12px;
+  background: var(--primary-green);
+  color: #ffffff;
+  border: none;
+  padding: 10px 24px;
+  border-radius: var(--radius-pill);
+  font-weight: 700;
+  cursor: pointer;
+}
+
+@media (max-width: 1024px) {
+  .browse-layout {
+    grid-template-columns: 1fr;
+  }
+  .browse-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (max-width: 640px) {
+  .browse-grid {
+    grid-template-columns: 1fr;
+  }
+}
